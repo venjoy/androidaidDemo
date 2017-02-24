@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInResult;
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private Button mGPlus, mFacebook, mTwitter;
     private GplusPresenterImpl objGplusPresenter;
+    private TextView mGplusProfile ;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -44,6 +46,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mGPlus = (Button) findViewById(R.id.btn_gplus);
         mFacebook = (Button) findViewById(R.id.btn_facebook);
         mTwitter = (Button) findViewById(R.id.btn_twitter);
+        mGplusProfile = (TextView) findViewById(R.id.gplus_credentials
+        );
     }
 
     @Override
@@ -70,6 +74,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             SocialProfile mSocialProfile = new SocialProfile();
             mSocialProfile.setmEmailAddress(result.getSignInAccount().getEmail());
             mSocialProfile.setmDisplayName(result.getSignInAccount().getDisplayName());
+
+            mGplusProfile.setText(mSocialProfile.getmDisplayName()  + "\n" + mSocialProfile.getmEmailAddress());
         }
 
     }

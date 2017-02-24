@@ -19,46 +19,6 @@ import socialogin.venjoy.com.socialogin.R;
  * Created by Vaibhav on 30-01-2017.
  */
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
 
-    private Button mGPlus, mFacebook, mTwitter;
-    private GplusPresenterImpl objGplusPresenter;
-
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        setListner();
-
-        objGplusPresenter = new GplusPresenterImpl();
-        objGplusPresenter.initGoogle(this);
-
-    }
-
-    // set Listner for onClick
-    private void setListner() {
-        mGPlus.setOnClickListener(this);
-        mFacebook.setOnClickListener(this);
-        mTwitter.setOnClickListener(this);
-    }
-
-
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (requestCode == Constants.G_PLUS_REQUESTCODE && resultCode == RESULT_OK) {
-            GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
-            SocialProfile mSocialProfile = new SocialProfile();
-            mSocialProfile.setmEmailAddress(result.getSignInAccount().getEmail());
-            mSocialProfile.setmDisplayName(result.getSignInAccount().getDisplayName());
-        }
-
-    }
-
-    @Override
-    public void onClick(View v) {
-
-    }
 }

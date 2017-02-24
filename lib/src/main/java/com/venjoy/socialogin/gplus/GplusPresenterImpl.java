@@ -39,7 +39,7 @@ public class GplusPresenterImpl implements GplusPresenter, GoogleApiClient.OnCon
     @Override
     public void performLogin(Activity mActivity) {
         Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
-        ((MainActivity) mActivity).startActivityForResult(signInIntent, Constants.G_PLUS_REQUESTCODE);
+        (mActivity).startActivityForResult(signInIntent, Constants.G_PLUS_REQUESTCODE);
     }
 
     @Override
