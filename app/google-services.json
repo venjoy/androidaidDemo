@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "243392534125",
+    "project_id": "socailogin-157917"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:243392534125:android:b8cab84df32ddd80",
+        "android_client_info": {
+          "package_name": "com.venjoy.socialogin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "243392534125-3gj52bqe40sfacf1243uvoi6ebq1067g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFZ1dH6zInr2pVUx8jqUUlo0m65ebnIck"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
