@@ -12,7 +12,6 @@ import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.venjoy.socialogin.activity.MainActivity;
 import com.venjoy.socialogin.util.Constants;
 
 /**
@@ -39,7 +38,7 @@ public class GplusPresenterImpl implements GplusPresenter, GoogleApiClient.OnCon
     @Override
     public void performLogin(Activity mActivity) {
         Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
-        ((MainActivity) mActivity).startActivityForResult(signInIntent, Constants.G_PLUS_REQUESTCODE);
+        mActivity.startActivityForResult(signInIntent, Constants.G_PLUS_REQUESTCODE);
     }
 
     @Override

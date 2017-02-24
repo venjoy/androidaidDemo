@@ -34,6 +34,53 @@
           "status": 1
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:243392534125:android:4e4acf29b43e3856",
+        "android_client_info": {
+          "package_name": "com.venjoy.socialogindemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "243392534125-9ct7fbj0527v61gsvfb06nlj5tsmhm7o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.venjoy.socialogindemo",
+            "certificate_hash": "9117717277fe5225aafce29e6dcb58263b5c6d32"
+          }
+        },
+        {
+          "client_id": "243392534125-3gj52bqe40sfacf1243uvoi6ebq1067g.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "243392534125-dlr0cn8d94hs8espkb3r0auclol96n26.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.venjoy.socialogindemo",
+            "certificate_hash": "1be67bbd40b79c3fc5bbb61e8fe1379ab61293ad"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFZ1dH6zInr2pVUx8jqUUlo0m65ebnIck"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
     }
   ],
   "configuration_version": "1"
