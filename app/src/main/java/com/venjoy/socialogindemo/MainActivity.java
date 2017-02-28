@@ -6,12 +6,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.venjoy.socialogin.gplus.GplusPresenterImpl;
 import com.venjoy.socialogin.model.SocialProfile;
 import com.venjoy.socialogin.util.Constants;
+import com.venjoy.socialogin.util.Factory;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -47,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mGPlus = (Button) findViewById(R.id.btn_gplus);
         mFacebook = (Button) findViewById(R.id.btn_facebook);
         mTwitter = (Button) findViewById(R.id.btn_twitter);
-        mGplusCredentials = (TextView) findViewById(R.id.gplus_credentials);
+        mGplusProfile = (TextView) findViewById(R.id.gplus_credentials);
     }
 
     @Override
@@ -78,7 +80,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             mSocialProfile.setmEmailAddress(result.getSignInAccount().getEmail());
             mSocialProfile.setmDisplayName(result.getSignInAccount().getDisplayName());
 
-            mGplusCredentials.setText(mSocialProfile.getmDisplayName() + "\n" + mSocialProfile.getmEmailAddress());
+            mGplusProfile.setText(mSocialProfile.getmDisplayName() + "\n" + mSocialProfile.getmEmailAddress());
         }
 
     }
