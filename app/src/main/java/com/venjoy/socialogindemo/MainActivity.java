@@ -1,25 +1,23 @@
 package com.venjoy.socialogindemo;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInResult;
-import com.venjoy.socialogin.gplus.GplusPresenter;
+import com.venjoy.socialogin.gplus.GplusPresenterImpl;
 import com.venjoy.socialogin.model.SocialProfile;
 import com.venjoy.socialogin.util.Constants;
-import com.venjoy.socialogin.util.Factory;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button mGPlus, mFacebook, mTwitter;
-    private GplusPresenter objGplusPresenter;
-    private TextView mGplusCredentials, mFacebookCredentials, mTwitterCredentials;
+    private GplusPresenterImpl objGplusPresenter;
+    private TextView mGplusProfile ;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -66,6 +64,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
         }
     }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
