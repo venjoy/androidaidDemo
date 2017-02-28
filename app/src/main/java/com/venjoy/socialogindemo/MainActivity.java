@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         initViews();
         setListner();
 
-        // Needs to be performed by user
+        // Needs to be performed by user using factory Class
 
         objGplusPresenter = Factory.getGplusInstance();
         objGplusPresenter.initGoogle(this);

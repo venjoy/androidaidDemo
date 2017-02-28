@@ -3,7 +3,8 @@ package com.venjoy.socialogin.util;
 import com.venjoy.socialogin.gplus.GplusPresenterImpl;
 
 /**
- * Created by lin on 24/2/17.
+ * Created by Vaibhav Jain on 24/2/17.
+ * This is a factory class used to create an object of the desired classs
  */
 
 public class Factory {
